@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firsts steps with DOM</title>
+    <style>
+body {
+    background: cornflowerblue;
+    color: black;
+    font: normal 18pt Times;
+    }
+    </style>
+</head>
+<body>
+    <h1>Usando DOOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOOM</strong> em Javascript.</p>
+    <p>Ei <B>Caramba</B></p> <!-- negrito -->
+    <div class="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] //está no plural, precisa colchetes
+        /*
+        document.write(p1.innerHTML) //pega o html inteiro, o inner text pega o texto cru
+        var d = window.document.getElementById('msg') // está no singular "by ID", não precisa colchetes
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+        var d = window.document.querySelector('div.msg')  //método mais recente   
+        d.style.background = 'blue'
+
+        </script>
+</body>
+</html>
